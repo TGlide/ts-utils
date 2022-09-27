@@ -3,6 +3,45 @@ type KeyTypesMap = Record<
   Array<string> | ((v: unknown) => boolean) | string
 >;
 
+/**
+ * Checks if the given value is an object of type T, given a map of keys and
+ * their types/validators.
+ * @date 9/27/2022 - 11:20:54 AM
+ *
+ * @category Object
+ *
+ * @template T
+ * @param {unknown} value
+ * @param {KeyTypesMap} keyTypesMap
+ * @returns {value is T}
+ *
+ * @example
+ * ```
+ * type ExampleType = {
+ *   a: string;
+ *   b: number;
+ *   c: string | number;
+ *   d: string[]
+ *   e: {
+ *     f: string;
+ *     g: number;
+ *   }
+ * }
+ *
+ * export const isExampleType = (value: unknown): value is ExampleType => {
+ *   return isObjectType(value, {
+ *     a: 'string',
+ *     b: 'number',
+ *     c: ['string', 'number'],
+ *     d: (v) => Array.isArray(v) && v.every((v) => typeof v === 'string'),
+ *     e: (v) => isObjectType(v, {
+ *       f: 'string',
+ *       g: 'number',
+ *     }),
+ *   });
+ * };
+ * ```
+ */
 export const isObjectType = <T>(
   value: unknown,
   keyTypesMap: KeyTypesMap
