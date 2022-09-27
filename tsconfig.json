@@ -2,5 +2,5 @@
   "extends": "./node_modules/@significa/tsconfig-config/index.json",
   "include": [
     "src/**/*.ts"
-  ]
+  ],
 }

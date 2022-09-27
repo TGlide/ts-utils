@@ -41,5 +41,6 @@ Copy the scripts you need into your project, and use them 😎
 
 [ ] Add documentation
 [ ] Add tests 
+[ ] Make it a npm package
 
 
