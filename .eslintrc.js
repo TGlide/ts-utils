@@ -15,7 +15,7 @@ module.exports = {
     'import/resolver': {
       typescript: {},
       node: {
-        moduleDirectory: ['node_modules', 'src/'],
+        moduleDirectory: ['node_modules', './src/'],
       },
     },
   },

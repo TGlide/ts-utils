@@ -3,3 +3,4 @@
 
 # Run commands here
 npm run validate
+npm run coverage

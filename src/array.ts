@@ -1,6 +1,9 @@
-export const range = (start: number, end: number): number[] => {
+export const range = (start: number, stop?: number): number[] => {
+  const n1 = stop === undefined ? 0 : start
+  const n2 = stop === undefined ? start : stop
   const result: number[] = []
-  for (let i = start; i <= end; i++) {
+
+  for (let i = n1; i < n2; i++) {
     result.push(i)
   }
   return result
