@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "prettier": "prettier \"src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|md|mdx)\" --write",
+    "postinstall": "husky install",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+    "format": "prettier \"src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|md|mdx|vue)\" --write",
+    "validate:format": "yarn format --check",
+    "validate:types": "tsc --noEmit",
+    "validate": "yarn lint --max-warnings=0 && yarn validate:format && yarn validate:types"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@significa/eslint-config": "^2.0.1",
+    "@significa/prettier-config": "^2.0.0",
+    "@significa/tsconfig-config": "^2.0.0",
+    "eslint": "^8.24.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.3",
+    "vitest": "^0.23.4"
+  }
+}
