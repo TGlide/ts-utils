@@ -39,9 +39,9 @@ export const isLast = (index: number, array: unknown[]) => {
 }
 
 export const getNewIndex = (
+  array: unknown[],
   currIndex: number,
-  add: number,
-  array: unknown[]
+  add: number
 ) => {
   let newIndex = (currIndex + add) % array.length
   if (newIndex < 0) newIndex = array.length + newIndex

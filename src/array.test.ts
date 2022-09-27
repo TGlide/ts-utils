@@ -10,17 +10,20 @@ import {
 
 test('range', () => {
   expect(range(1, 5)).toEqual([1, 2, 3, 4])
+  expect(range(5)).toEqual([0, 1, 2, 3, 4])
 })
 
 test('getValueAtPercentage', () => {
   expect(getValueAtPercentage([0, 100, 50], 0.25)).toBe(50)
+  expect(getValueAtPercentage([0, 100, 50], 0.5)).toBe(100)
+  expect(getValueAtPercentage([0, 100, 50], 0.75)).toBe(75)
 })
 
 test('getNewIndex', () => {
-  expect(getNewIndex(0, 1, [1, 2, 3])).toBe(1)
-  expect(getNewIndex(2, 1, [1, 2, 3])).toBe(0)
-  expect(getNewIndex(2, -1, [1, 2, 3])).toBe(1)
-  expect(getNewIndex(0, -1, [1, 2, 3])).toBe(2)
+  expect(getNewIndex([1, 2, 3], 0, 1)).toBe(1)
+  expect(getNewIndex([1, 2, 3], 2, 1)).toBe(0)
+  expect(getNewIndex([1, 2, 3], 2, -1)).toBe(1)
+  expect(getNewIndex([1, 2, 3], 0, -1)).toBe(2)
 })
 
 test('isArrayOfType', () => {

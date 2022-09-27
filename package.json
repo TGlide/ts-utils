@@ -8,7 +8,8 @@
     "validate:types": "tsc --noEmit",
     "validate": "yarn lint --max-warnings=0 && yarn validate:format && yarn validate:types",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "coverage:watch": "vitest watch --coverage"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
