@@ -74,10 +74,16 @@ export function objectKeys<K extends PropertyKey>(
   return Object.keys(object) as Array<K>;
 }
 
-// Provides a method with typed keys for Object.entries
-export function objectEntries<K extends PropertyKey, V>(object: Record<K, V>) {
-  return Object.entries(object) as Array<[K, V]>;
+/**
+ * Strict typed `Object.entries`
+ * Extracted from https://github.com/antfu/utils
+ *
+ * @category Object
+ */
+export function objectEntries<T extends object>(obj: T) {
+  return Object.entries(obj) as Array<[keyof T, T[keyof T]]>
 }
+
 
 export function objectFromEntries<K extends PropertyKey, V>(
   entries: Array<[K, V]>
