@@ -19,12 +19,14 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - run: npm ci
+      - name: Install dependencies
+        run: yarn
 
-      - run: npm run lint
+      - name: Lint
+        run: yarn lint
 
   build:
-    name: Build
+    name: Validate
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -34,9 +36,11 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - run: npm ci
+      - name: Install dependencies
+        run: yarn
 
-      - run: npm run validate:build
+      - name: Lint
+        run: yarn validate:build
 
   test:
     name: Test
@@ -49,6 +53,8 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - run: npm ci
+      - name: Install dependencies
+        run: yarn
 
-      - run: npm run test
+      - name: Lint
+        run: yarn test
