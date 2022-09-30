@@ -39,8 +39,8 @@ Copy the scripts you need into your project, and use them 😎
 
 ## TODO
 
-[ ] Add documentation
-[ ] Add tests 
-[ ] Make it a npm package
+- [ ] Add documentation
+- [ ] Add tests 
+- [ ] Make it a npm package
 
 
