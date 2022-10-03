@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1664311242584" clover="3.2.0">
-  <project timestamp="1664311242585" name="All files">
-    <metrics statements="302" coveredstatements="89" conditionals="36" coveredconditionals="33" methods="25" coveredmethods="22" elements="363" coveredelements="144" complexity="0" loc="302" ncloc="302" packages="1" files="6" classes="6"/>
-    <file name="array.ts" path="/home/thomas/Programming/Personal/typescript-utils/src/array.ts">
-      <metrics statements="56" coveredstatements="56" conditionals="20" coveredconditionals="20" methods="10" coveredmethods="10"/>
+<coverage generated="1664815986006" clover="3.2.0">
+  <project timestamp="1664815986006" name="All files">
+    <metrics statements="309" coveredstatements="96" conditionals="40" coveredconditionals="37" methods="27" coveredmethods="24" elements="376" coveredelements="157" complexity="0" loc="309" ncloc="309" packages="1" files="6" classes="6"/>
+    <file name="array.ts" path="/home/thomas/Programming/Personal/ts-utils/src/array.ts">
+      <metrics statements="63" coveredstatements="63" conditionals="24" coveredconditionals="24" methods="12" coveredmethods="12"/>
       <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
       <line num="2" count="2" type="cond" truecount="2" falsecount="0"/>
       <line num="3" count="2" type="cond" truecount="2" falsecount="0"/>
@@ -60,8 +60,15 @@
       <line num="54" count="4" type="stmt"/>
       <line num="55" count="4" type="stmt"/>
       <line num="56" count="4" type="cond" truecount="1" falsecount="0"/>
+      <line num="57" count="1" type="stmt"/>
+      <line num="58" count="1" type="stmt"/>
+      <line num="59" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="60" count="3" type="stmt"/>
+      <line num="61" count="3" type="cond" truecount="1" falsecount="0"/>
+      <line num="62" count="3" type="cond" truecount="1" falsecount="0"/>
+      <line num="63" count="3" type="cond" truecount="1" falsecount="0"/>
     </file>
-    <file name="color.ts" path="/home/thomas/Programming/Personal/typescript-utils/src/color.ts">
+    <file name="color.ts" path="/home/thomas/Programming/Personal/ts-utils/src/color.ts">
       <metrics statements="8" coveredstatements="8" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
       <line num="2" count="1" type="stmt"/>
@@ -72,7 +79,7 @@
       <line num="7" count="1" type="stmt"/>
       <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
     </file>
-    <file name="math.ts" path="/home/thomas/Programming/Personal/typescript-utils/src/math.ts">
+    <file name="math.ts" path="/home/thomas/Programming/Personal/ts-utils/src/math.ts">
       <metrics statements="25" coveredstatements="25" conditionals="10" coveredconditionals="10" methods="10" coveredmethods="10"/>
       <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
       <line num="2" count="8" type="stmt"/>
@@ -100,7 +107,7 @@
       <line num="24" count="1000" type="stmt"/>
       <line num="25" count="1000" type="cond" truecount="1" falsecount="0"/>
     </file>
-    <file name="object.ts" path="/home/thomas/Programming/Personal/typescript-utils/src/object.ts">
+    <file name="object.ts" path="/home/thomas/Programming/Personal/ts-utils/src/object.ts">
       <metrics statements="126" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
       <line num="2" count="0" type="stmt"/>
@@ -229,7 +236,7 @@
       <line num="125" count="0" type="stmt"/>
       <line num="126" count="0" type="stmt"/>
     </file>
-    <file name="style.ts" path="/home/thomas/Programming/Personal/typescript-utils/src/style.ts">
+    <file name="style.ts" path="/home/thomas/Programming/Personal/ts-utils/src/style.ts">
       <metrics statements="17" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
       <line num="2" count="0" type="stmt"/>
@@ -249,7 +256,7 @@
       <line num="16" count="0" type="stmt"/>
       <line num="17" count="0" type="stmt"/>
     </file>
-    <file name="svg.ts" path="/home/thomas/Programming/Personal/typescript-utils/src/svg.ts">
+    <file name="svg.ts" path="/home/thomas/Programming/Personal/ts-utils/src/svg.ts">
       <metrics statements="70" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
       <line num="2" count="0" type="stmt"/>

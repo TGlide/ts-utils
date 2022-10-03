@@ -6,6 +6,7 @@ import {
   getNewIndex,
   isArrayOfType,
   isLast,
+  toggleItemInArray,
 } from './array'
 
 test('range', () => {
@@ -44,4 +45,10 @@ test('isArrayOfType', () => {
 test('isLast', () => {
   expect(isLast(0, [1, 2, 3])).toBe(false)
   expect(isLast(2, [1, 2, 3])).toBe(true)
+})
+
+test('toggleItemInArray', () => {
+  expect(toggleItemInArray([1, 2, 3], 2)).toEqual([1, 3])
+  expect(toggleItemInArray([1, 2, 3], 4)).toEqual([1, 2, 3, 4])
+  expect(toggleItemInArray([1, 2, 3], 1)).toEqual([2, 3])
 })

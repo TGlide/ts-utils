@@ -54,3 +54,10 @@ export const isArrayOfType = <T>(
 ): value is T[] => {
   return Array.isArray(value) && value.every(typeChecker)
 }
+
+// function that given an array and an item, toggles the item in the array
+export const toggleItemInArray = <T>(array: T[], item: T): T[] => {
+  const index = array.indexOf(item)
+  if (index === -1) return [...array, item]
+  return [...array.slice(0, index), ...array.slice(index + 1)]
+}
