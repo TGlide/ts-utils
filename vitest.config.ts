@@ -9,7 +9,7 @@ export default defineConfig({
       statements: 80,
       branches: 80,
       include: ['src/**/*.ts'],
-      all: true,
+      all: false,
     },
   },
 })
