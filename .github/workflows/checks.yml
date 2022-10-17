@@ -40,7 +40,7 @@ jobs:
         run: yarn
 
       - name: Lint
-        run: yarn validate:build
+        run: yarn validate
 
   test:
     name: Test
