@@ -40,6 +40,11 @@ test('isArrayOfType', () => {
   expect(
     isArrayOfType([1, 2, '3'], (v): v is string => typeof v === 'string')
   ).toBe(false)
+  expect(isArrayOfType([1, 2, '3'], ['number', 'string'])).toBe(true)
+  expect(isArrayOfType([1, 2, '3'], ['number', 'boolean'])).toBe(false)
+  expect(isArrayOfType([1, 2], ['number', 'boolean'])).toBe(true)
+  expect(isArrayOfType([1, 2, '3'], 'number')).toBe(false)
+  expect(isArrayOfType([1, 2, 3], 'number')).toBe(true)
 })
 
 test('isLast', () => {

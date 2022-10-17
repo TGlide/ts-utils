@@ -50,9 +50,19 @@ export const getNewIndex = (
 
 export const isArrayOfType = <T>(
   value: unknown,
-  typeChecker: (v: unknown) => v is T
+  typeChecker: ((v: unknown) => v is T) | string | string[]
 ): value is T[] => {
-  return Array.isArray(value) && value.every(typeChecker)
+  return (
+    Array.isArray(value) &&
+    value.every((v) => {
+      if (typeof typeChecker === 'function') {
+        return typeChecker(v)
+      } else if (typeof typeChecker === 'string') {
+        return typeof v === typeChecker
+      }
+      return typeChecker.includes(typeof v)
+    })
+  )
 }
 
 // function that given an array and an item, toggles the item in the array
