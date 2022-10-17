@@ -51,7 +51,6 @@ export const isObjectType = <T>(
   }
 
   for (const [key, check] of Object.entries(keyTypesMap)) {
-    if (!(key in object)) return false
     const value = (object as Record<string, unknown>)[key]
 
     if (typeof check === 'function') {
