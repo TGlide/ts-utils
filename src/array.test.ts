@@ -7,6 +7,7 @@ import {
   isArrayOfType,
   isLast,
   toggleItemInArray,
+  isPastMiddleInArray,
 } from './array'
 
 test('range', () => {
@@ -56,4 +57,12 @@ test('toggleItemInArray', () => {
   expect(toggleItemInArray([1, 2, 3], 2)).toEqual([1, 3])
   expect(toggleItemInArray([1, 2, 3], 4)).toEqual([1, 2, 3, 4])
   expect(toggleItemInArray([1, 2, 3], 1)).toEqual([2, 3])
+})
+
+test('isPastMiddleInArray', () => {
+  expect(isPastMiddleInArray([1, 2, 3], 0)).toBe(false)
+  expect(isPastMiddleInArray([1, 2, 3], 1)).toBe(false)
+  expect(isPastMiddleInArray([1, 2, 3], 2)).toBe(false)
+  expect(isPastMiddleInArray([1, 2, 3], 3)).toBe(true)
+  expect(isPastMiddleInArray([1, 2, 3], 4)).toBe(false)
 })

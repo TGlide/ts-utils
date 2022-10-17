@@ -71,3 +71,8 @@ export const toggleItemInArray = <T>(array: T[], item: T): T[] => {
   if (index === -1) return [...array, item]
   return [...array.slice(0, index), ...array.slice(index + 1)]
 }
+
+// Receives an array and an item, returns true if the item is past the middle of the array
+export function isPastMiddleInArray<T>(array: Array<T>, item: T): boolean {
+  return array.indexOf(item) > Math.floor(array.length / 2)
+}

@@ -69,11 +69,11 @@ export const isObjectType = <T>(
   return true
 }
 
+type Stringifiable = string | number | boolean | null | undefined
+
 // Provides a method with typed keys for Object.keys
-export function objectKeys<K extends PropertyKey>(
-  object: Record<K, unknown>
-): Array<K> {
-  return Object.keys(object) as Array<K>
+export function objectKeys<O extends object>(object: O) {
+  return Object.keys(object) as Array<`${keyof O & Stringifiable}`>
 }
 
 /**
@@ -92,34 +92,28 @@ export function objectFromEntries<K extends PropertyKey, V>(
   return Object.fromEntries(entries) as Record<K, V>
 }
 
-export function objectFilter<K extends PropertyKey, V>(
-  object: Partial<Record<K, V>>,
-  predicate: (key: K, value: V) => boolean
-): Partial<Record<K, V>> {
+export function objectFilter<O extends object>(
+  object: O,
+  predicate: (key: keyof O, value: O[keyof O]) => boolean
+): Partial<O> {
   return Object.fromEntries(
     Object.entries(object).filter(([key, value]) =>
-      predicate(key as K, value as V)
+      predicate(key as keyof O, value as O[keyof O])
     )
-  ) as Partial<Record<K, V>>
+  ) as Partial<O>
 }
 
-// Receives an array and an item, returns true if the item is past the middle of the array
-export function isPastMiddleInArray<T>(array: Array<T>, item: T): boolean {
-  return array.indexOf(item) > Math.floor(array.length / 2)
-}
+export function objectMapKeys<O extends object>(
+  obj: O,
+  fn: (key: string, val: O[keyof O], obj: O) => string
+): Record<string, O[keyof O]> {
+  const result: Record<string, O[keyof O]> = {}
 
-export function objectMapKeys<K extends PropertyKey, V>(
-  obj: Record<K, V>,
-  fn: (val: V, key: K, obj: Record<K, V>) => PropertyKey
-): Record<PropertyKey, V> {
-  const result: Record<PropertyKey, V> = {}
   objectKeys(obj).reduce((acc, k) => {
-    if (typeof k === 'string') {
-      acc[fn(obj[k], k, obj)] = obj[k]
-    } else {
-      acc[k] = obj[k]
-    }
+    acc[fn(k, obj[k as keyof O], obj)] = obj[k as keyof O]
+
     return acc
   }, result)
+
   return result
 }
