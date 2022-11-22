@@ -44,7 +44,7 @@ type KeyTypesMap<T> = Record<
  */
 export const isObjectType = <T>(
   object: unknown,
-  keyTypesMap: KeyTypesMap<T>
+  keyTypesMap: Partial<KeyTypesMap<T>>
 ): object is T => {
   if (typeof object !== 'object' || object === null) {
     return false
