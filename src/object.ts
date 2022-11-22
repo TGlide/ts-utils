@@ -1,7 +1,4 @@
-type KeyTypesMap = Record<
-  string,
-  Array<string> | ((v: unknown) => boolean) | string
->
+type KeyTypesMap<T> = Record<keyof T, Array<string> | ((v: unknown) => boolean) | string>;
 
 /**
  * Checks if the given value is an object of type T, given a map of keys and
@@ -42,32 +39,29 @@ type KeyTypesMap = Record<
  * };
  * ```
  */
-export const isObjectType = <T>(
-  object: unknown,
-  keyTypesMap: KeyTypesMap
-): object is T => {
-  if (typeof object !== 'object' || object === null) {
-    return false
-  }
+export const isObjectType = <T>(object: unknown, keyTypesMap: KeyTypesMap<T>): object is T => {
+	if (typeof object !== 'object' || object === null) {
+		return false;
+	}
 
-  for (const [key, check] of Object.entries(keyTypesMap)) {
-    const value = (object as Record<string, unknown>)[key]
+	for (const [key, check] of objectEntries(keyTypesMap)) {
+		const value = (object as Record<keyof T, unknown>)[key];
 
-    if (typeof check === 'function') {
-      if (!check(value)) {
-        return false
-      }
-    } else if (typeof check === 'string') {
-      if (typeof value !== check) {
-        return false
-      }
-    } else if (!check.includes(typeof value)) {
-      return false
-    }
-  }
+		if (typeof check === 'function') {
+			if (!check(value)) {
+				return false;
+			}
+		} else if (typeof check === 'string') {
+			if (typeof value !== check) {
+				return false;
+			}
+		} else if (!check.includes(typeof value)) {
+			return false;
+		}
+	}
 
-  return true
-}
+	return true;
+};
 
 type Stringifiable = string | number | boolean | null | undefined
 
