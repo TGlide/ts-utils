@@ -1,7 +1,6 @@
 {
   "scripts": {
     "prettier": "prettier \"src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|md|mdx)\" --write",
-    "postinstall": "husky install",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "format": "prettier \"src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|md|mdx|vue)\" --write",
     "validate:format": "yarn format --check",

@@ -20,10 +20,10 @@ jobs:
           node-version-file: '.nvmrc'
 
       - name: Install dependencies
-        run: yarn
+        run: pnpm i
 
       - name: Lint
-        run: yarn lint
+        run: pnpm run lint
 
   build:
     name: Validate
@@ -37,10 +37,10 @@ jobs:
           node-version-file: '.nvmrc'
 
       - name: Install dependencies
-        run: yarn
+        run: pnpm i
 
       - name: Lint
-        run: yarn validate
+        run: pnpm run validate
 
   test:
     name: Test
@@ -54,10 +54,10 @@ jobs:
           node-version-file: '.nvmrc'
 
       - name: Install dependencies
-        run: yarn
+        run: pnpm i
 
       - name: Test
-        run: yarn test
+        run: pnpm run test
   coverage:
     name: Coverage
     runs-on: ubuntu-latest
@@ -70,7 +70,7 @@ jobs:
           node-version-file: '.nvmrc'
 
       - name: Install dependencies
-        run: yarn
+        run: pnpm i
 
       - name: Coverage
-        run: yarn coverage
+        run: pnpm run coverage
