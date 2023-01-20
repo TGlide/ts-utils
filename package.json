@@ -1,42 +1,10 @@
 {
   "name": "@tglide_personal/ts-utils",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "A collection of TypeScript utilities",
   "author": "Thomas G. Lopes",
   "license": "MIT",
-  "exports": {
-    "./array": {
-      "types": "./dist/array.d.ts",
-      "import": "./dist/array.js",
-      "require": "./dist/array.cjs"
-    },
-    "./color": {
-      "types": "./dist/color.d.ts",
-      "import": "./dist/color.js",
-      "require": "./dist/color.cjs"
-    },
-    "./math": {
-      "types": "./dist/math.d.ts",
-      "import": "./dist/math.js",
-      "require": "./dist/math.cjs"
-    },
-    "./object": {
-      "types": "./dist/object.d.ts",
-      "import": "./dist/object.js",
-      "require": "./dist/object.cjs"
-    },
-    "./style": {
-      "types": "./dist/style.d.ts",
-      "import": "./dist/style.js",
-      "require": "./dist/style.cjs"
-    },
-    "./svg": {
-      "types": "./dist/svg.d.ts",
-      "import": "./dist/svg.js",
-      "require": "./dist/svg.cjs"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tglide/ts-utils.git"
@@ -55,7 +23,8 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "coverage:watch": "vitest watch --coverage",
-    "prepublish": "node build.mjs"
+    "prepare": "node ./scripts/prepare.mjs",
+    "postpack": "node ./scripts/postpack.mjs"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
@@ -69,6 +38,12 @@
     "eslint-import-resolver-typescript": "^3.5.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "eslint-import-resolver-node": "^0.3.7",
+    "eslint-module-utils": "^2.7.4",
+    "eslint-scope": "^7.1.1",
+    "eslint-utils": "^3.0.0",
+    "eslint-visitor-keys": "^3.3.0",
+    "prettier-linter-helpers": "^1.0.0",
     "glob": "^8.1.0",
     "happy-dom": "^7.5.12",
     "husky": "^8.0.1",
@@ -77,13 +52,5 @@
     "tsup": "^6.5.0",
     "typescript": "^4.8.3",
     "vitest": "^0.23.4"
-  },
-  "dependencies": {
-    "eslint-import-resolver-node": "^0.3.7",
-    "eslint-module-utils": "^2.7.4",
-    "eslint-scope": "^7.1.1",
-    "eslint-utils": "^3.0.0",
-    "eslint-visitor-keys": "^3.3.0",
-    "prettier-linter-helpers": "^1.0.0"
   }
 }

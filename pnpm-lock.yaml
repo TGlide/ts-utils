@@ -9,14 +9,20 @@ specifiers:
   '@vitest/coverage-c8': ^0.23.4
   eslint: ^8.24.0
   eslint-config-prettier: ^8.5.0
+  eslint-import-resolver-node: ^0.3.7
   eslint-import-resolver-typescript: ^3.5.1
+  eslint-module-utils: ^2.7.4
   eslint-plugin-import: ^2.26.0
   eslint-plugin-prettier: ^4.2.1
+  eslint-scope: ^7.1.1
+  eslint-utils: ^3.0.0
+  eslint-visitor-keys: ^3.3.0
   glob: ^8.1.0
   happy-dom: ^7.5.12
   husky: ^8.0.1
   lint-staged: ^13.0.3
   prettier: ^2.7.1
+  prettier-linter-helpers: ^1.0.0
   tsup: ^6.5.0
   typescript: ^4.8.3
   vitest: ^0.23.4
@@ -30,14 +36,20 @@ devDependencies:
   '@vitest/coverage-c8': 0.23.4_happy-dom@7.8.1
   eslint: 8.32.0
   eslint-config-prettier: 8.6.0_eslint@8.32.0
+  eslint-import-resolver-node: 0.3.7
   eslint-import-resolver-typescript: 3.5.3_ps7hf4l2dvbuxvtusmrfhmzsba
+  eslint-module-utils: 2.7.4_ba2ykau6kcnaogk6czydxhup4m
   eslint-plugin-import: 2.27.5_bzolr7xl6xcwr64wsu2tr4eimm
   eslint-plugin-prettier: 4.2.1_cn4lalcyadplruoxa5mhp7j3dq
+  eslint-scope: 7.1.1
+  eslint-utils: 3.0.0_eslint@8.32.0
+  eslint-visitor-keys: 3.3.0
   glob: 8.1.0
   happy-dom: 7.8.1
   husky: 8.0.3
   lint-staged: 13.1.0
   prettier: 2.8.3
+  prettier-linter-helpers: 1.0.0
   tsup: 6.5.0_typescript@4.9.4
   typescript: 4.9.4
   vitest: 0.23.4_happy-dom@7.8.1
