@@ -1,4 +1,21 @@
 {
+  "name": "@tglide_personal/ts-utils",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "A collection of TypeScript utilities",
+  "author": "Thomas G. Lopes",
+  "license": "MIT",
+  "exports": {
+    "./*": "./dist/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tglide/ts-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tglide/ts-utils/issues"
+  },
+  "homepage": "https://github.com/tglide/ts-utils#readme",
   "scripts": {
     "prettier": "prettier \"src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|md|mdx)\" --write",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
@@ -8,7 +25,8 @@
     "validate": "pnpm run lint --max-warnings=0 && pnpm run validate:format && pnpm run validate:types",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "coverage:watch": "vitest watch --coverage"
+    "coverage:watch": "vitest watch --coverage",
+    "prepublish": "node build.mjs"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
@@ -22,12 +40,21 @@
     "eslint-import-resolver-typescript": "^3.5.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "glob": "^8.1.0",
     "happy-dom": "^7.5.12",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
+    "tsup": "^6.5.0",
     "typescript": "^4.8.3",
     "vitest": "^0.23.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "eslint-import-resolver-node": "^0.3.7",
+    "eslint-module-utils": "^2.7.4",
+    "eslint-scope": "^7.1.1",
+    "eslint-utils": "^3.0.0",
+    "eslint-visitor-keys": "^3.3.0",
+    "prettier-linter-helpers": "^1.0.0"
+  }
 }
