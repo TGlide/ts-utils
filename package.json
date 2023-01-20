@@ -3,9 +3,9 @@
     "prettier": "prettier \"src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|md|mdx)\" --write",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "format": "prettier \"src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|md|mdx|vue)\" --write",
-    "validate:format": "yarn format --check",
+    "validate:format": "pnpm run format --check",
     "validate:types": "tsc --noEmit",
-    "validate": "yarn lint --max-warnings=0 && yarn validate:format && yarn validate:types",
+    "validate": "pnpm run lint --max-warnings=0 && pnpm run validate:format && pnpm run validate:types",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "coverage:watch": "vitest watch --coverage"

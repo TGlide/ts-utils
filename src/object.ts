@@ -61,7 +61,7 @@ export const isObjectType = <T>(
       if (typeof value !== check) {
         return false
       }
-    } else if (!check.includes(typeof value)) {
+    } else if (!check?.includes(typeof value)) {
       return false
     }
   }

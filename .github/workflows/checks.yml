@@ -86,7 +86,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Lint
+      - name: Validate
         run: pnpm run validate
 
   test:
