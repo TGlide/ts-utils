@@ -3,13 +3,12 @@ import fs from 'fs'
 
 import glob from 'glob'
 
-// Get all ts files from src folder, excluding test files
-const tsFiles = new glob.GlobSync('src/**/*.ts', { ignore: 'src/**/*.test.ts' })
-
 // Run the command `tsup ${tsFiles.join(' ')}` on the command line, no more comments:
-execSync(`pnpm tsup ${tsFiles.found.join(' ')} --dts`, { stdio: 'inherit' })
+execSync(`pnpm tsup ./src/index.ts --format esm,cjs --dts`, {
+  stdio: 'inherit',
+})
 
 // Copy all dist files to the root folder
-glob.sync('./dist/**/*').forEach((file) => {
+glob.sync('./dist/**/index.d.ts').forEach((file) => {
   fs.copyFileSync(file, file.replace('/dist/', '/'))
 })

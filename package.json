@@ -1,7 +1,6 @@
 {
   "name": "@tglide_personal/ts-utils",
-  "type": "module",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "A collection of TypeScript utilities",
   "author": "Thomas G. Lopes",
   "license": "MIT",
@@ -13,6 +12,17 @@
     "url": "https://github.com/tglide/ts-utils/issues"
   },
   "homepage": "https://github.com/tglide/ts-utils#readme",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "index.d.ts",
   "scripts": {
     "prettier": "prettier \"src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|md|mdx)\" --write",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
