@@ -47,6 +47,7 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    needs: cache-and-install
     steps:
       - uses: actions/checkout@v3
 
@@ -64,6 +65,7 @@ jobs:
     name: Validate
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    needs: cache-and-install
     steps:
       - uses: actions/checkout@v3
 
@@ -81,6 +83,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    needs: cache-and-install
     steps:
       - uses: actions/checkout@v3
 
@@ -97,6 +100,7 @@ jobs:
     name: Coverage
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    needs: cache-and-install
     steps:
       - uses: actions/checkout@v3
 
