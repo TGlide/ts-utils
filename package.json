@@ -7,34 +7,34 @@
   "license": "MIT",
   "exports": {
     "./array": {
+      "types": "./dist/array.d.ts",
       "import": "./dist/array.js",
-      "require": "./dist/array.cjs",
-      "types": "./dist/array.d.ts"
+      "require": "./dist/array.cjs"
     },
     "./color": {
+      "types": "./dist/color.d.ts",
       "import": "./dist/color.js",
-      "require": "./dist/color.cjs",
-      "types": "./dist/color.d.ts"
+      "require": "./dist/color.cjs"
     },
     "./math": {
+      "types": "./dist/math.d.ts",
       "import": "./dist/math.js",
-      "require": "./dist/math.cjs",
-      "types": "./dist/math.d.ts"
+      "require": "./dist/math.cjs"
     },
     "./object": {
+      "types": "./dist/object.d.ts",
       "import": "./dist/object.js",
-      "require": "./dist/object.cjs",
-      "types": "./dist/object.d.ts"
+      "require": "./dist/object.cjs"
     },
     "./style": {
+      "types": "./dist/style.d.ts",
       "import": "./dist/style.js",
-      "require": "./dist/style.cjs",
-      "types": "./dist/style.d.ts"
+      "require": "./dist/style.cjs"
     },
     "./svg": {
+      "types": "./dist/svg.d.ts",
       "import": "./dist/svg.js",
-      "require": "./dist/svg.cjs",
-      "types": "./dist/svg.d.ts"
+      "require": "./dist/svg.cjs"
     }
   },
   "repository": {
