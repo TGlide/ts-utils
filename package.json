@@ -1,12 +1,17 @@
 {
   "name": "@tglide_personal/ts-utils",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A collection of TypeScript utilities",
   "author": "Thomas G. Lopes",
   "license": "MIT",
   "exports": {
-    "./*": "./dist/*"
+    "./array": "./dist/array",
+    "./color": "./dist/color",
+    "./math": "./dist/math",
+    "./object": "./dist/object",
+    "./style": "./dist/style",
+    "./svg": "./dist/svg"
   },
   "repository": {
     "type": "git",
