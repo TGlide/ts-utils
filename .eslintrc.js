@@ -40,7 +40,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.{ts,tsx}'],
+      files: ['**/*.{ts,tsx,mjs}'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
         sourceType: 'module',
